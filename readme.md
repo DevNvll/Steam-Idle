@@ -1,6 +1,6 @@
-# twitch-tv-sub-checker
+# steam-idle
 
-> My polished app
+> A simple tool for idling games on Steam.
 
 
 ## Dev
