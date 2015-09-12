@@ -33,4 +33,4 @@ Builds the app for OS X, Linux, and Windows, using [electron-packager](https://g
 
 ## License
 
-MIT © [Henrick Martins](http://razr9.github.io)
+MIT © [Henrick Martins](https://github.com/Razr9)
