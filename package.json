@@ -1,0 +1,48 @@
+{
+  "name": "steam-idle",
+  "productName": "SteamIdle",
+  "version": "1.0.0",
+  "description": "A simple application for idling games on Steam.",
+  "license": "MIT",
+  "repository": "Razr9/steam-idle",
+  "author": {
+    "name": "Henrick Martins",
+    "email": "hmartins505@gmail.com",
+    "url": "razr9.github.io"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=0.31.1"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "launcher.js",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.1.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.31.1",
+    "xo": "^0.7.1"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "rules": {
+      "prefer-arrow-callback": 0
+    }
+  }
+}

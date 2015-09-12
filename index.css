@@ -1,0 +1,16 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.btn-launch {
+	border-color: #000;
+	color: #fff;
+
+}
+
+footer {
+	padding-top: 20px;
+	text-align: center;
+}
