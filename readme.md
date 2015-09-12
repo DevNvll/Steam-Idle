@@ -6,6 +6,10 @@
 
 A tool to let you idle any game in your library for whether to farm trading cards or gaming time.
 
+## Download
+
+Visit the [releases](https://github.com/Razr9/Steam-Idle/releases "Releases")  page.
+
 ## Dev
 
 ```
