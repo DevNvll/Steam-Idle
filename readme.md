@@ -4,7 +4,7 @@
 
 [![Steam Idle Demo](https://j.gifs.com/vZbP9D.gif)](https://www.youtube.com/watch?v=iW5NpC0MoeY)
 
-A tool to let you idle any game in your library for whether to farm trading cards or gaming time.
+A tool to let you idle any game in your library for farm trading cards or gaming time.
 
 ## Download
 
