@@ -9,6 +9,8 @@ A tool to let you idle any game in your library for farm trading cards or gaming
 ## Download
 
 Visit the [releases](https://github.com/Razr9/Steam-Idle/releases "Releases")  page.
+*Windows Only.*
+
 
 ## Dev
 
