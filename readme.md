@@ -14,14 +14,16 @@ Visit the [releases](https://github.com/Razr9/Steam-Idle/releases "Releases")  p
 
 ## Dev
 The application is built on [electron](http://electron.atom.io/ "Electron")
+
+First off, install electron globally
 ```
 $ npm install electron-prebuilt -g
 ```
-
+Then install project modules
 ```
 $ npm install
 ```
-
+To start the application, run:
 ```
 $ npm start
 ```
