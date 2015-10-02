@@ -16,8 +16,6 @@ Visit the [releases](https://github.com/Razr9/Steam-Idle/releases "Releases")  p
 $ npm install
 ```
 
-### Run
-
 ```
 $ npm start
 ```
