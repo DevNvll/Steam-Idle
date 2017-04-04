@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "description": "A simple application for idling games on Steam.",
   "license": "MIT",
-  "repository": "Razr9/steam-idle",
+  "repository": "DevNvll/steam-idle",
   "author": {
-    "name": "Henrick Martins",
-    "email": "hmartins505@gmail.com",
-    "url": "razr9.github.io"
+    "name": "Henrick Mello",
+    "email": "devnoir@protonmail.com",
+    "url": "DevNvll.github.io"
   },
   "engines": {
     "node": ">=0.10.0"
