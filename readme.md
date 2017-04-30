@@ -13,6 +13,7 @@ Visit the [releases](https://github.com/Razr9/Steam-Idle/releases "Releases")  p
 
 
 ## Dev
+#### this is for development only. If you don't know what it is, you probably don't need this section
 The application is built on [electron](http://electron.atom.io/ "Electron")
 
 First off, install electron globally
