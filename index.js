@@ -1,48 +1,30 @@
 'use strict';
-const app = require('app');
-const BrowserWindow = require('browser-window');
+const { app, BrowserWindow } = require('electron')
 
-// report crashes to the Electron project
-require('crash-reporter').start();
+const path = require('path')
 
-// adds debug features like hotkeys for triggering dev tools and reload
-//require('electron-debug')();
-
-// prevent window being GC'd
 let mainWindow;
 
-function createMainWindow() {
-	const win = new BrowserWindow({
-		width: 600,
-		height: 300,
-		'auto-hide-menu-bar': true,
-		resizable: false
-	});
-
-	win.loadUrl(`file://${__dirname}/index.html`);
-	win.on('closed', onClosed);
-
-	return win;
+function createWindow () {
+  const browserOptions = {
+    width: 600,
+    height: 305
+  }
+  mainWindow = new BrowserWindow(browserOptions)
+  mainWindow.loadURL('file://' + __dirname + '/src/index.html')
+  mainWindow.on('closed', function() {
+    mainWindow = null
+  });
 }
-
-function onClosed() {
-	// deref the window
-	// for multiple windows store them in an array
-	mainWindow = null;
-}
-
+app.on('ready', createWindow)
 app.on('window-all-closed', function () {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
-});
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
 
-app.on('activate-with-no-open-windows', function () {
-	if (!mainWindow) {
-		mainWindow = createMainWindow();
-	}
-});
-
-app.on('ready', function () {
-	mainWindow = createMainWindow();
-});
+app.on('activate', function () {
+  if (mainWindow === null) {
+    createWindow()
+  }
+})

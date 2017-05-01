@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Steam Idle</title>
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link href="vendor/material/css/roboto.min.css" rel="stylesheet">
+		<link href="vendor/material/css/material.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<script type='text/javascript'>
+			const shell = require('electron').shell;
+			const {launch} = require('./launcher.js');
+		</script>
+		<div class="container">
+			<header>
+				<h1 style="text-align: center;" id="title">Steam Idle</h1>
+			</header>
+			<section class="main">
+				<input type="text" id="appid" class="form-control" placeholder="Games appids separated by commas. e.g.: 107410, 271590, 292030"><br>
+				<center><button class="btn btn-info btn-raised btn-lg" onclick="launch(document.getElementById('appid').value)">Launch</button></center>
+			</section>
+			<footer>
+				This application was created with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by
+				<a href="#" onclick="shell.openExternal('https://github.com/DevNvll');">Henrick Mello</a><br>
+
+				<a href="#" onclick="shell.openExternal('https://github.com/DevNvll');">GitHub</a> | <a href="#" onclick="shell.openExternal('http://steamcommunity.com/profiles/76561198052893297');">Steam</a>
+			</footer>
+		</div>
+	</body>
+</html>
