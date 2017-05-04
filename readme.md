@@ -2,42 +2,40 @@
 
 > A simple tool for idling games on Steam.
 
-[![Steam Idle Demo](https://j.gifs.com/vZbP9D.gif)](https://www.youtube.com/watch?v=iW5NpC0MoeY)
+[![Steam Idle Demo](https://j.gifs.com/3lnDgQ.gif)](https://www.youtube.com/watch?v=C91TULNSYa4)
 
-A tool which let you idle any game in your library to farm trading cards or gaming time.
+A tool that let you idle any game in your Steam library.
 
 ## Download
 
-Visit the [releases](https://github.com/Razr9/Steam-Idle/releases "Releases")  page.
+Visit the [releases](https://github.com/DevNvll/Steam-Idle/releases "Releases")  page.
 *Windows Only.*
 
 
 ## Dev
 #### this is for development only. If you don't know what it is, you probably don't need this section
-The application is built on [electron](http://electron.atom.io/ "Electron")
+The application is built on [electron](http://electron.atom.io/ "Electron").
 
 First off, install electron globally
 ```
-$ npm install electron-prebuilt -g
-```
-Then install project modules
-```
 $ npm install
+or
+$ yarn
 ```
 To start the application, run:
 ```
-$ npm start
+$ npm start:watch
 ```
 
-### Build
+## Build
 
 ```
-$ npm run build
+$ npm run dist
 ```
 
-Builds the app for OS X, Linux, and Windows, using [electron-packager](https://github.com/maxogden/electron-packager).
+Builds the app for Windows using [electron-builder](https://github.com/electron-userland/electron-builder/).
 
 
 ## License
 
-MIT © [Henrick Martins](https://github.com/Razr9)
+MIT © [Henrick Mello](https://github.com/DevNvll)
