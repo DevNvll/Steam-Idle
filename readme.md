@@ -16,7 +16,7 @@ Visit the [releases](https://github.com/DevNvll/Steam-Idle/releases "Releases") 
 #### this is for development only. If you don't know what it is, you probably don't need this section
 The application is built on [electron](http://electron.atom.io/ "Electron").
 
-First off, install electron globally
+Install dependencies.
 ```
 $ npm install
 or
