@@ -1,0 +1,30 @@
+.btn-primary.start {
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #141414 !important;
+	box-shadow: 0 3px 0 0 #0b0b0b;
+  border: 0;
+}
+
+.btn-primary.start:active, .btn-primary.active {
+	background-color: #0b0b0b !important;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+
+.btn-primary.clear {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background-color: #d9534f !important;
+	box-shadow: 0 3px 0 0 #bf4343;
+  border: 0;
+}
+
+.btn-primary.clear:active, .btn-primary.active {
+	background-color: #bf4343 !important;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}

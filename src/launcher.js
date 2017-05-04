@@ -1,19 +1,30 @@
-const {execFile} = require('child_process');
-const {remote} = require('electron');
+import { execFile } from "child_process";
+import { remote } from "electron";
+import { resolve } from "path";
 
 function formatTimeString(str) {
-  return parseFloat(str.replace(',','.').replace(' ',''));
+  return parseFloat(str.replace(",", ".").replace(" ", ""));
 }
 
 function toMs(num) {
-  return num*360000;
+  return num * 3600000;
 }
 
-const launch = function(appid) {
-  const games = appid.split(',');
-  games.forEach(function(entry) {
-    execFile("./idler.exe", [entry.trim()]);
+export function legacyLaunch(appids) {
+  const games = appids.split(",");
+  games.forEach(entry => {
+    execFile("./bin/idler.exe", [entry.trim()]);
   });
 }
 
-module.exports.launch = launch;
+export function launch(games) {
+  games.forEach(game => {
+    execFile(
+      "./bin/idler.exe",
+      [game.appid.toString(), toMs(game.time).toString(), game.name],
+      err => {
+        console.log(err);
+      }
+    );
+  });
+}

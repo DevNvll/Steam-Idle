@@ -4,18 +4,77 @@
   "version": "2.0.0",
   "description": "A simple application for idling games on Steam.",
   "license": "MIT",
-  "repository": "DevNvll/steam-idle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevNvll/Steam-Idle.git"
+  },
+  "homepage": "https://github.com/DevNvll/Steam-Idle",
   "author": {
     "name": "Henrick Mello",
     "email": "devnoir@protonmail.com",
     "url": "DevNvll.github.io"
   },
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager ./ SteamIdle --platform=win32 --icon=assets/icon.ico --electron-version=1.3.15 --arch=ia32 --out=./releases --prune --win32metadata.ProductName=SteamIdle --win32metadata.FileDescription=\"Steam Idler\" --win32metadata.CompanyName=\"Rekt Division\" --ignore=\"(/app|.gitignore|webpack.config.babel.js|.babelrc|/releases).*\""
+    "start": "cross-env NODE_ENV=development electron .",
+    "watch": "cross-env NODE_ENV=development webpack --config ./webpack.config.babel.js --watch",
+    "start:watch": "concurrently -k \"npm run watch\" \"npm start\"",
+    "clean": "rimraf dist",
+    "precommit": "lint-staged",
+    "build": "npm run clean && build --dir -w --ia32",
+    "dist": "npm run clean && build -w --ia32",
+    "publish": "npm run clean && build -w --ia32 -p always"
+  },
+  "build": {
+    "win": {
+      "icon": "./assets/icon.ico",
+      "extraFiles": [
+        "./bin"
+      ]
+    },
+    "nsis": {
+      "artifactName": "${name}-setup-${version}.${ext}"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "electron-react-devtools": "^0.4.0",
+    "electron-updater": "^1.14.3",
+    "react": "^0.14.8",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-transition-group": "^15.5.2",
+    "react-autosuggest": "^9.0.1",
+    "react-dom": "^0.14.7",
+    "reactstrap": "^4.5.0",
+    "styled-components": "^1.4.6"
   },
   "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.11.6",
+    "concurrently": "^3.4.0",
+    "cross-env": "^4.0.0",
+    "css-loader": "^0.23.1",
     "electron": "^1.6.6",
-    "electron-packager": "^8.6.0"
+    "electron-builder": "^17.1.2",
+    "file-loader": "^0.9.0",
+    "fs-extra": "^3.0.0",
+    "husky": "^0.13.3",
+    "json-loader": "^0.5.4",
+    "lint-staged": "^3.4.1",
+    "postcss-loader": "^0.10.1",
+    "prettier": "^1.3.1",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
   }
 }
